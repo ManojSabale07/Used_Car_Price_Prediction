@@ -13,6 +13,12 @@ The focus of this project is **conceptual clarity, disciplined preprocessing, an
 
 ---
 
+## 🚀 Live Demo
+**Try the deployed app here:**  
+👉 [Used Car Price Predictor — Live on HuggingFace Spaces](https://huggingface.co/spaces/ManojSabale/Car_Price_Predictor)
+
+Enter car details and get an instant price estimate powered by the XGBoost model.
+
 ## Objective
 
 The primary objectives of this project are to:
@@ -109,12 +115,18 @@ This project aims to **predict a fair selling price** for used cars based on his
 
 ## Model Performance Summary
 
-| Model             | Test R² | Adjusted R² | Observation                            |
-| ----------------- | ------- | ----------- | -------------------------------------- |
-| Linear Regression | ~0.88   | ~0.87       | Strong baseline                        |
-| Ridge Regression  | ~0.88   | ~0.87       | Improved coefficient stability         |
-| Lasso Regression  | ~0.88   | ~0.87       | Marginal improvement, minimal sparsity |
+## Model Performance Summary
 
+| Model             | Test R² | Observation                                    |
+|-------------------|---------|------------------------------------------------|
+| Linear Regression | 0.8809  | Strong baseline                                |
+| Ridge Regression  | 0.8829  | Improved coefficient stability                 |
+| Lasso Regression  | 0.8569  | Slight underfitting                            |
+| Decision Tree     | 0.8900  | Good but prone to overfitting                  |
+| Random Forest     | 0.9163  | Strong ensemble performance                    |
+| XGBoost           | 0.9221  | Best model — selected for deployment           |
+
+**Winner: XGBoost (R² = 92.21%)**
 ### Key Observations
 
 * All models achieved similar performance (~88% R²)
@@ -176,12 +188,16 @@ The stored model represents the **final regularized version** selected after com
 
 ---
 
-## Future Improvements
+## Improvements Made
+- ✅ Trained and compared 6 models including ensemble methods
+- ✅ XGBoost selected as final model (R² = 92.21%)
+- ✅ Deployed as interactive web app via Streamlit + HuggingFace Spaces
 
-* Apply tree-based models (Random Forest, Gradient Boosting)
-* Perform systematic feature selection using RFE
-* Add business-focused error metrics (MAPE)
-* Deploy model using a simple web interface
+## Future Improvements
+- Add SHAP explainability to show which features drive each prediction
+- Collect more luxury vehicle data to improve high-end price accuracy
+- Add confidence intervals to predictions
+- Retrain periodically as market prices shift
 
 ---
 
