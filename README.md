@@ -1,4 +1,4 @@
-# 🚗 Used Car Price Prediction using Linear Regression
+# 🚗 Used Car Price Prediction using XGBoost
 
 ## Overview
 
@@ -115,8 +115,6 @@ This project aims to **predict a fair selling price** for used cars based on his
 
 ## Model Performance Summary
 
-## Model Performance Summary
-
 | Model             | Test R² | Observation                                    |
 |-------------------|---------|------------------------------------------------|
 | Linear Regression | 0.8809  | Strong baseline                                |
@@ -154,11 +152,7 @@ Car_price_prediction_LR/
 │   └── Vehicle.csv
 │
 ├── notebooks/
-│   ├── v1_baseline/
-│   │   └── Car_price_prediction_LR.ipynb
-│   │
-│   └── v2_regularized/
-│       └── Used_Car_price_prediction_LR.ipynb
+├    └──Used_Car_price_prediction.ipynb
 │
 ├── models/
 │   └── car_price_model.pkl
